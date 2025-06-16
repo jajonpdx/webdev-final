@@ -6,7 +6,7 @@
   display: none !important;
 }
 
-.about-section {
+.page-section {
   border: 1px solid black;
   border-radius: 0.5rem;
 }
@@ -15,8 +15,31 @@
   margin: 0rem 1rem 1rem 1rem;
 }
 
+.modal-body {
+  text-align: center;
+}
+
 .position-md-absolute {
   position: static;
+}
+
+.show-title {
+  font-style: italic;
+}
+
+#prev-work .page-section {
+  padding: 1rem;
+}
+
+#prev-work .card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.card-img-top {
+  height: 200px; /* control the image area */
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (min-width: 768px) {
@@ -24,7 +47,7 @@
     position: absolute;
   }
 
-  .about-section {
+  .page-section {
     border: none;
   }
 
@@ -33,12 +56,18 @@
   }
 
   .about-text {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: white;
     margin-left: 2rem !important;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 75% !important;
   }
 }

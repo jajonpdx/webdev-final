@@ -1,4 +1,6 @@
 function init() {
+  initBigPictureModal();
+
   const form = document.getElementById("form-element");
   if (!form) {
     return;
@@ -21,6 +23,19 @@ function init() {
   });
 
   form.addEventListener("submit", handleFormSubmit);
+}
+
+function initBigPictureModal() {
+  const modal = document.getElementById("big-picture");
+  const modalImg = modal.querySelector("img");
+
+  modal.addEventListener("show.bs.modal", function (e) {
+    const triggerCard = e.relatedTarget;
+    const clickedImg = triggerCard.querySelector("img");
+
+    modalImg.src = clickedImg.getAttribute("src");
+    modalImg.alt = clickedImg.getAttribute("alt");
+  });
 }
 
 function validateForm(fields, submitButton) {
