@@ -8,6 +8,11 @@
   object-position: center;
 }
 
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+
 .hidden {
   display: none !important;
 }
@@ -34,7 +39,8 @@
 }
 
 #prev-work .page-section,
-#projects .page-section {
+#projects .page-section,
+#pictures .page-section {
   padding: 1rem;
 }
 
