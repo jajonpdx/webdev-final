@@ -4,7 +4,30 @@ function init() {
     return;
   }
 
+  const submitButton = form.querySelector('input[type="submit"]');
+  const requiredFields = [
+    document.getElementById("fullname"),
+    document.getElementById("email"),
+    document.getElementById("message"),
+  ];
+
+  submitButton.disabled = true;
+  submitButton.classList.remove("disabled");
+
+  requiredFields.forEach((field) => {
+    field.addEventListener("input", () => {
+      validateForm(requiredFields, submitButton);
+    });
+  });
+
   form.addEventListener("submit", handleFormSubmit);
+}
+
+function validateForm(fields, submitButton) {
+  const allFilled = fields.every((field) => {
+    return field.value.trim() !== "";
+  });
+  submitButton.disabled = !allFilled;
 }
 
 function handleFormSubmit(e) {
@@ -49,6 +72,10 @@ function handleSubmitAnother() {
   if (form) {
     form.reset();
     form.classList.remove("hidden");
+
+    const submitButton = form.querySelector('input[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.classList.add("disabled");
   }
 }
 
