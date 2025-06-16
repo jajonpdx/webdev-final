@@ -1,0 +1,85 @@
+:root {
+  --black: #040404;
+}
+
+.card-img-top {
+  height: 200px; /* control the image area */
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.about-section img {
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.page-section {
+  border: 1px solid rgba(0, 0, 0, 0.176);
+  border-radius: 0.5rem;
+}
+
+.position-md-absolute {
+  position: static;
+}
+
+.show-title {
+  font-style: italic;
+}
+
+#prev-work .page-section,
+#projects .page-section,
+#pictures .page-section {
+  padding: 1rem;
+}
+
+#prev-work .card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.project-vid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .about-section img {
+    margin: 0rem;
+  }
+
+  .about-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-left: 2rem !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .position-md-absolute {
+    position: absolute;
+  }
+
+  .project-vid {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 75% !important;
+  }
+}
