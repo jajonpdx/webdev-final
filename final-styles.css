@@ -1,4 +1,44 @@
-/* CSS goes here */
+:root {
+  --black: #040404;
+}
+
 .hidden {
   display: none !important;
+}
+
+.about-section {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.about-section img {
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.position-md-absolute {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .position-md-absolute {
+    position: absolute;
+  }
+
+  .about-section {
+    border: none;
+  }
+
+  .about-section img {
+    margin: 0rem;
+  }
+
+  .about-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-left: 2rem !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
 }
