@@ -1,10 +1,11 @@
+(function () {
+  document.addEventListener("DOMContentLoaded", init);
+})();
+
 function init() {
   initBigPictureModal();
 
   const form = document.getElementById("form-element");
-  if (!form) {
-    return;
-  }
 
   const submitButton = form.querySelector('input[type="submit"]');
   const requiredFields = [
@@ -93,7 +94,3 @@ function handleSubmitAnother() {
     submitButton.classList.add("disabled");
   }
 }
-
-(function () {
-  document.addEventListener("DOMContentLoaded", init);
-})();
